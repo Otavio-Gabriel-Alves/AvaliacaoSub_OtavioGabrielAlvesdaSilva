@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulário de contato do site Horizonte.">
+    <meta name="author" content="Seu Nome">
+    <title>Contate-nos</title>
+    <link rel="stylesheet" href="../estilos/layout.css">
+    <link rel="icon" href="../midias/FAVICON.png">
+    <link rel="stylesheet" href="../estilos/formulario.css">
+</head>
+
+<body>
+    <header>
+        <h1>VEJA O HORIZONTE</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../paginas/sobre.html">Sobre</a></li>
+                <li><a href="../paginas/contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Contate-nos</h2>
+        <form action="#" method="post" onsubmit="mostrarMensagem(event)">
+            <table>
+                <tr>
+                    <td><label for="ipNome">Nome:</label></td>
+                    <td><input type="text" id="ipNome" name="nome" required></td>
+                </tr>
+                <tr>
+                    <td><label for="ipEmail">E-mail:</label></td>
+                    <td><input type="email" id="ipEmail" name="email" required></td>
+                </tr>
+                <tr>
+                    <td><label for="ipTel">Telefone:</label></td>
+                    <td><input type="tel" id="ipTel" name="telefone" required></td>
+                </tr>
+                <tr>
+                    <td><label for="endereco">Endereço:</label></td>
+                    <td><input type="text" id="endereco" name="endereco"></td>
+                </tr>
+                <tr>
+                    <td><label for="dataNasc">Data de Nascimento:</label></td>
+                    <td><input type="date" id="dataNasc" name="data_nascimento" required></td>
+                </tr>
+                <tr>
+                    <td><label for="slMotivo">Onde nos conheceu:</label></td>
+                    <td>
+                        <select id="slMotivo" name="conheceu" required>
+                            <option value="">Selecione...</option>
+                            <option value="internet">Internet</option>
+                            <option value="amigos">Amigos</option>
+                            <option value="tv">TV</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="aMensagem">Mensagem:</label></td>
+                    <td><textarea id="aMensagem" name="mensagem" rows="5" required></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="checkbox" id="novidades" name="novidades">
+                        <label for="novidades">Deseja receber novidades?</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="submit">Enviar</button>   
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <div class="resultado" style="margin-top: 30px;">
+            <h3 id="resposta"></h3>
+            <p id="nomeExibido"></p>
+            <p id="emailExibido"></p>
+            <p id="telExibido"></p>
+            <p id="dataExibida"></p>
+            <p id="motivoExibido"></p>
+            <p id="mensagemExibida"></p>
+        </div>
+    </main>
+
+    <script src="../script/Script.js"></script>
+</body>
+<footer>
+    <p>&copy; 2026 Todos os direitos reservados.</p>
+</footer>
+</html>
